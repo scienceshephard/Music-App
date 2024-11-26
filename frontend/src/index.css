@@ -2,10 +2,10 @@
   --background-color:#040404ac;
   --component-color: #808080;
   --text-color: white;
-  --hover-component-color: #8080808c;
+  --hover-component-color: #d1c9c998;
 }
 *{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
   color: var(--text-color);
 }
@@ -15,11 +15,19 @@ html, body{
   box-sizing: border-box;
 }
 .img-btn{
+  position: relative;
   padding: 5px;
   border-radius: 20px;
   background-color: var(--component-color);
-
 }
+.img-btn:active{
+  background-color: white;
+  color: black;
+}
+.img-btn:hover{
+  background-color: var(--hover-component-color);
+}
+
 .img-icon-btn{
   width: 28px;
 }
@@ -33,13 +41,13 @@ html, body{
 }
 
 .container{
-  height: 100vh;
   background-color: var(--background-color);
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 .header{
-  padding: 20px;
+  padding: 10px 0px 20px 0px;
   justify-content: center;
 }
 .header-menu{
@@ -47,12 +55,11 @@ html, body{
 }
 .search-box{
   background-color: var(--component-color);
-  /* padding: 6px; */
   display: flex;
   border-radius: 20px;
 }
-.search-box:hover, .img-small-icon-btn:hover, #search:hover{
-  background-color: var(--hover-component-color);
+.search-box:hover, section:hover, main:hover{
+  box-shadow: 3px 2px 1px var(--hover-component-color);
 }
 
 #search{
@@ -66,18 +73,41 @@ html, body{
 }
 #search::placeholder{
   color: white;
+}
+#searchbtn .searchbtn{
+  fill:red;
+}
+.library-search-box{
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
 
+}
+.library-buttons{
+  display: flex;
+  gap: 20px;
+}
+.lib-button{
+  border: none;
+  background-color: var(--hover-component-color);
+}
+.lib-button:hover{
+  background-color: transparent;
+  border: 1px solid var(--hover-component-color);
 }
 .library-search{
   outline: none;
-  border: 1px solid white;
-  width: 100px;
+  border: 1px solid var(--hover-component-color);
+  border-radius: 20px;
+  padding: 6px;
+  width: 100%;
   background-color: var(--component-color);
 }
 section, main{
   background-color: var(--component-color);
   border-radius: 10px;
-  height: 75vh;
+  height: 70vh;
+  padding: 10px;
 }
 .container-body{
   display: grid;
@@ -86,14 +116,29 @@ section, main{
   grid-template-columns: 0.3fr auto;
   gap: 20px;
 }
-section{
-  border: 1px solid red;
-
-}
 footer{
   border: 1px solid blue;
   margin-top: auto;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-top: auto;
+}
+.playButtons{
+  border: 1px solid yellow;
+  display: flex;
+  gap: 10px;
+}
+.button{
+  padding: 0;
+  border-radius: 100%;
+  background-color: var(--component-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.button:hover{
+  cursor: pointer;
+  background-color: var(--hover-component-color);
+  border-color: var(--hover-component-color);
+
 }
